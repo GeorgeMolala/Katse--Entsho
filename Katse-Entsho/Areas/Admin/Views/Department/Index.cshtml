@@ -1,0 +1,80 @@
+﻿@model List<Department>
+@{
+    ViewBag.Title = "Departments";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="box-columned box-spaced-between">
+    <div class="">
+        <a asp-controller="Department" asp-action="Add"
+           class="btn btn-primary">Add</a>
+    </div>
+    <div class="sortbtn">
+        <button type="button" class="btn btn-primary dropdown-toggle"
+                id="sortDropdownBtn" data-toggle="dropdown"
+                aria-expanded="false">
+            Sort by
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sortDropdownBtn">
+            <li class="dropdown-item">
+                <a asp-controller="Doctor" asp-action="Index" asp-route-sortBy="none">
+                    -----
+                </a>
+            </li>
+            <li class="dropdown-item">
+                <a asp-controller="Doctor" asp-action="Index" asp-route-sortBy="name">
+                    Name
+                </a>
+            </li>
+            <li class="dropdown-item">
+                <a asp-controller="Doctor" asp-action="Index" asp-route-sortBy="suburb">
+                    Suburb
+                </a>
+            </li>
+            <li class="dropdown-item">
+                <a asp-controller="Doctor" asp-action="Index" asp-route-sortBy="medprac">
+                    Medical Practice
+                </a>
+            </li>
+            <li class="dropdown-item">
+                <a asp-controller="Doctor" asp-action="Index" asp-route-sortBy="status">
+                    Status
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<table class="d-table">
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            // int num = medication.MedicationIngredients.Where(s => s.MedicationID == medication.MedicationID).Select(v => v.ActiveIngredientID).FirstOrDefault();
+
+            <tr>
+                <td>@department.DepartmentName </td>
+                <td>@department.Description </td>
+                
+
+             
+
+                <td>
+
+                    <a asp-controller="Department" asp-action="Edit"
+                       asp-route-id="@department.DeptID">Edit</a>
+                    <a asp-controller="Department" asp-action="Delete"
+                       asp-route-id="@department.DeptID">Delete</a>
+                <td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
