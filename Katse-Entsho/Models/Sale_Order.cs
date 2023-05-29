@@ -16,6 +16,14 @@ namespace Katse_Entsho.Models
 
         public int QuoteID { get; set; }
 
+        public int UserID { get; set; }
+
+
+        public double Total { get; set; }
+
+
+        public string OrderStatus { get; set; }
+
 
     }
 }
