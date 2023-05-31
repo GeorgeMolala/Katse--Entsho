@@ -7,7 +7,17 @@
   
 }
 
-<h1>Medical Practices</h1>
+<div class="illus-group-col">
+    <h1 class="headline center"><span class="background_Matte">Department Management </span></h1>
+    <h3 class="title">
+        Administrator
+    </h3>
+    <br />
+
+
+</div>
+
+
 
 <form method="post" asp-controller="Department" asp-action="Edit">
     <div asp-validation-summary="All" class="text-danger"> </div>
@@ -16,7 +26,7 @@
         <div class="col-sm-9">
             <label>Department Name :</label>
             <div class="col-sm-7">
-                <input asp-for="DepartmentName" class="form-control" />
+                <input asp-for="DepartmentName" data-toggle="tooltip" data-placement="top" title="Type department Name" placeholder="Department Name" form-control" />
             </div>
             <div class="col">
                 <span asp-validation-for="DepartmentName"
@@ -44,7 +54,7 @@
         <div class="col-sm-9">
             <label>Description :</label>
             <div class="col-sm-7">
-                <input type="text" asp-for="Description" class="form-control" />
+                <input type="text" asp-for="Description" data-toggle="tooltip" data-placement="top" title="Provide description of Department" placeholder="Department Description" class="form-control" />
             </div>
             <div class="col">
                 <span asp-validation-for="Description"

@@ -28,9 +28,9 @@ namespace Katse_Entsho
         {
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddMemoryCache();
-
-            services.AddControllersWithViews();
             services.AddSession();
+            services.AddControllersWithViews();
+            
             services.AddDbContext<KatseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("KatseContext")));
 
             services.AddIdentity<UserApp, IdentityRole>(options =>

@@ -23,7 +23,7 @@
            
             <div class="col-sm-7">
                  <label>First Name</label>
-                <input asp-for="CustomerName" class="form-control" />
+                <input asp-for="CustomerName" class="form-control" placeholder="Provide Name"/>
             </div>
             <div class="col">
                 <span asp-validation-for="CustomerName"
@@ -37,7 +37,7 @@
             
             <div class="col-sm-7">
                 <label>Surname Name :</label>
-                <input asp-for="CustomerSurname" class="form-control" />
+                <input asp-for="CustomerSurname" class="form-control"  placeholder="Provide Surname"/>
             </div>
             <div class="col">
                 <span asp-validation-for="CustomerSurname"
@@ -52,7 +52,7 @@
             
             <div class="col-sm-7">
                 <label>Gender :</label>
-                <select asp-for="Gender" class="form-control">
+                <select asp-for="Gender" class="form-control" placeholder="Select Gender">
                     <option>Male</option>
                     <option>Female</option>
                 </select>
@@ -70,7 +70,7 @@
             <div class="col-sm-9">              
                 <div class="col-sm-7">
                      <label>ID Number :</label>
-                    <input  class="form-control" />
+                    <input  class="form-control" data-toggle="tooltip" data-placement="top" title="ID field, Type it exactly as it is written on your Identity Document" placeholder="Provide Identity Number"/>
                 </div>
                 <div class="col">
                     <span asp-validation-for="IDNumber"
@@ -86,7 +86,7 @@
             
             <div class="col-7">
                 <label>Contact Number :</label>
-                <input asp-for="ContactNumber" class="form-control" />
+                <input asp-for="ContactNumber" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide your 10 digit phone number e.g 071 2345 678" placeholder="Provide Phone Number"/>
             </div>
             <div class="col">
                 <span asp-validation-for="ContactNumber"
@@ -101,7 +101,7 @@
         <div class="col-sm-9">      
             <div class="col-sm-7 row" >
                 <label>Email Address :</label>
-                <input asp-for="Email" class="form-control" />
+                <input asp-for="Email" class="form-control" data-toggle="tooltip" data-placement="top" title="Email Field, e.g YourName@domain.com" placeholder="Provide Email"/>
             </div>
             <div class="col">
                 <span asp-validation-for="Email"
@@ -116,7 +116,7 @@
             
             <div class="col-sm-7">
                 <label>AddressLine1 :</label>
-                <input asp-for="AddressLine1" class="form-control" />
+                <input asp-for="AddressLine1" class="form-control" data-toggle="tooltip" data-placement="top" title="Line 1 Address, e.g 721 Block E" placeholder="Provide Address"/>
             </div>
             <div class="col">
                 <span asp-validation-for="AddressLine1"
@@ -130,8 +130,8 @@
         <div class="col-sm-9">
            
             <div class="col-sm-7"> 
-                <label>AddressLine2 :</label>
-                <input asp-for="AddressLine2" class="form-control" />
+                <label>AddressLine2 </label>
+                <input asp-for="AddressLine2" class="form-control" data-toggle="tooltip" data-placement="top" title="Optional" placeholder="Provide Address"/>
             </div>
             <div class="col">
                 <span asp-validation-for="AddressLine2"
@@ -144,8 +144,8 @@
         @*Needs to be linked to database*@
         <div class="col-md-7">
             <div class="form-group">
-                <label class="control-label">Province: </label>
-                <select class="form-control" id="pageProvinceElement" asp-for="ProvinceID" asp-items="@(new SelectList(ViewBag.province, "ProvinceID", "Name"))">
+                <label class="control-label">Province </label>
+                <select class="form-control" id="pageProvinceElement" asp-for="ProvinceID" asp-items="@(new SelectList(ViewBag.province, "ProvinceID", "Name"))" data-toggle="tooltip" data-placement="top" title="" placeholder="Select Province">
                 </select>
             </div>
 
@@ -163,7 +163,7 @@
         <div class="col-md-7">
             <div class="form-group">
                 <label class="control-label">City: </label>
-                <select id="pageCityElement" asp-for="CityID" class="form-control" asp-items="@(new SelectList(ViewBag.cities, "CityID", "Name"))">
+                <select id="pageCityElement" asp-for="CityID" class="form-control" asp-items="@(new SelectList(ViewBag.cities, "CityID", "Name"))" data-toggle="tooltip" data-placement="top" title="" placeholder="Select City">
                 </select>
 
             </div>
@@ -184,7 +184,7 @@
         <div class="col-md-7">
             <div class="form-group">
                 <label class="control-label">Suburb: </label>
-                <select id="pageSuburbElement" asp-for="SuburbID" class="form-control" asp-items="@(new SelectList(ViewBag.suburbs, "SuburbID", "Name"))">
+                <select id="pageSuburbElement" asp-for="SuburbID" class="form-control" asp-items="@(new SelectList(ViewBag.suburbs, "SuburbID", "Name"))" data-toggle="tooltip" data-placement="top" title="" placeholder="Select Suburb">
                 </select>
             </div>
 

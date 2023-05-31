@@ -16,7 +16,15 @@
         var srlSuburbs = "@ViewBag.Suburb_s";
     </script>
 }
+<div class="illus-group-col">
+    <h1 class="headline center"><span class="background_Matte">Manage Employees </span></h1>
+    <h3 class="title">
+        Administrator
+    </h3>
+    <br />
 
+
+</div>
 
 <h1></h1>
 
@@ -28,7 +36,7 @@
 
             <div class="col-sm-7">
                 <label>First Name</label>
-                <input asp-for="SalesPersonName" class="form-control" />
+                <input asp-for="SalesPersonName" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee Name" placeholder="Employee Name"/>
             </div>
             <div class="col">
                 <span asp-validation-for="SalesPersonName"
@@ -42,7 +50,7 @@
 
             <div class="col-sm-7">
                 <label>Surname Name :</label>
-                <input asp-for="SalesPersonSurname" class="form-control" />
+                <input asp-for="SalesPersonSurname" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee Surname" placeholder="Employee Surname"/>
             </div>
             <div class="col">
                 <span asp-validation-for="SalesPersonSurname"
@@ -57,7 +65,7 @@
 
             <div class="col-sm-7">
                 <label>Gender :</label>
-                <select asp-for="Gender" class="form-control">
+                <select asp-for="Gender" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee Gender" placeholder="Gender">
                     <option>Male</option>
                     <option>Female</option>
                 </select>
@@ -76,7 +84,7 @@
 
             <div class="col-7">
                 <label>Contact Number :</label>
-                <input asp-for="SalesPersonContact" class="form-control" />
+                <input asp-for="SalesPersonContact" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee phone number e.g 071 5154 234" placeholder="Employee Phone number"/>
             </div>
             <div class="col">
                 <span asp-validation-for="SalesPersonContact"
@@ -91,7 +99,7 @@
         <div class="col-sm-9">
             <div class="col-sm-7 row">
                 <label>Email Address :</label>
-                <input asp-for="SalesPersonEmail" class="form-control" />
+                <input asp-for="SalesPersonEmail" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee email e.g employeeName@domain.com" placeholder="Employee Email"/>
             </div>
             <div class="col">
                 <span asp-validation-for="SalesPersonEmail"
@@ -105,7 +113,7 @@
         <div class="col-sm-9">
             <div class="col-sm-7 row">
                 <label>Position :</label>
-                <input asp-for="GradeLevel" class="form-control" />
+                <input asp-for="GradeLevel" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee Position e.g Junior IT Support" placeholder="Employee Position"/>
             </div>
             <div class="col">
                 <span asp-validation-for="GradeLevel"
@@ -119,7 +127,7 @@
 
             <div class="col-sm-7">
                 <label>Department :</label>
-                <select asp-for="DeptID" asp-items="@(new SelectList(ViewBag.Departments, "DeptID", "DepartmentName"))" class="form-control">
+                <select asp-for="DeptID" asp-items="@(new SelectList(ViewBag.Departments, "DeptID", "DepartmentName"))" class="form-control" data-toggle="tooltip" data-placement="top" title="Assign Employee to Department" placeholder="Employee Department">
                 </select>
             </div>
             <div class="col">

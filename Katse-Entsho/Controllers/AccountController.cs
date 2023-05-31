@@ -12,6 +12,8 @@ using Katse_Entsho.Models;
 using Newtonsoft.Json;
 using System.Diagnostics;
 
+
+
 namespace Katse_Entsho.Controllers
 {
     public class AccountController : Controller
@@ -198,6 +200,7 @@ namespace Katse_Entsho.Controllers
                         }
                         return Redirect(model.ReturnUrl);
                     }
+
                 }
             }
             ModelState.AddModelError(" ", "Invalid username/password.");
@@ -206,11 +209,7 @@ namespace Katse_Entsho.Controllers
             return View(model);
         }
 
-        public IActionResult LogIn()
-        {
-            return View();
-        }
-
+     
 
 
 
