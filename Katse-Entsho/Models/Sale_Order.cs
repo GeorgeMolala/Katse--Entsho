@@ -19,6 +19,7 @@ namespace Katse_Entsho.Models
         public int UserID { get; set; }
 
 
+
         public double Total { get; set; }
 
 

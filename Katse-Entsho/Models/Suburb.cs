@@ -25,5 +25,6 @@ namespace Katse_Entsho.Models
 
         [Required(ErrorMessage = "Field Can not be empty")] //Health Council Used as Doctor ID
         public int CityID { get; set; }
+        public City City { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Katse_Entsho.Models
 {
-    public class RequestsQuote
+    public class RequestQuote
     {
     }
 }

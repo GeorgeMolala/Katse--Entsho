@@ -11,9 +11,11 @@ namespace Katse_Entsho.Models
         [Key]
         public int UserID { get; set; }
 
+
         [Required(ErrorMessage = "Field Can not be empty")]
         [StringLength(30)]
         public string SalesPersonName { get; set; }
+
 
         [Required(ErrorMessage = "Field Can not be empty")]
         [StringLength(30)]
@@ -24,12 +26,15 @@ namespace Katse_Entsho.Models
         [Required(ErrorMessage = "Field Can not be empty")]
         public string Gender { get; set; }
 
+
         [Required(ErrorMessage = "Field Can not be empty")]
         public int SalesPersonContact { get; set; }
+
 
         [Required(ErrorMessage = "Field Can not be empty")]
         [StringLength(30)]
         public string SalesPersonEmail { get; set; }
+
 
         [Required(ErrorMessage = "Field Can not be empty")]
         [StringLength(30)]
