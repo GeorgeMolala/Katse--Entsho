@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace Katse_Entsho.Areas.SalesPerson.Controllers
 {
+
     [Area ("SalesPerson")]
-    [Authorize (Roles ="SalesPerson")]
-    public class SalesPersonController : Controller
+    [Authorize (Roles="SalesPerson")]
+    public class ProductController : Controller
     {
-
-
-        [HttpGet]
         public IActionResult Index()
         {
             return View();

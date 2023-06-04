@@ -20,6 +20,7 @@ namespace Katse_Entsho.Models
         public string Name { get; set; }
 
 
+        
         [Required(ErrorMessage = "Field Can not be empty")] //Health Council Used as Doctor ID
         public int ProvinceID { get; set; }
         public Province Province { get; set; }

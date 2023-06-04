@@ -70,7 +70,7 @@ namespace Katse_Entsho.Migrations
                     CityID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 30, nullable: false),
-                    ProvinceID = table.Column<int>(nullable: false)
+                    ProvinceID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -111,7 +111,7 @@ namespace Katse_Entsho.Migrations
                     SuburbID = table.Column<string>(nullable: false),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
                     Postal_Code = table.Column<int>(nullable: false),
-                    CityID = table.Column<int>(nullable: false)
+                    CityID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {

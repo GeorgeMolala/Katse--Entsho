@@ -22,6 +22,8 @@ namespace Katse_Entsho.Data
         public DbSet<Province> Provinces { get; set; }
         public DbSet<SalesPerson> SalesPeople { get; set; }
         public DbSet<Suburb> Suburbs { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Product> Products { get; set; }
 
     }
 }

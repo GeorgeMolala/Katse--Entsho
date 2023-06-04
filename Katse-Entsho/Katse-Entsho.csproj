@@ -26,4 +26,11 @@
     <Folder Include="Areas\SalesPerson\Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Areas\SalesPerson\Views\SalesPerson\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
