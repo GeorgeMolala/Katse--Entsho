@@ -24,6 +24,10 @@ namespace Katse_Entsho.Models
         public IFormFile Picture { get; set; }
 
 
+        public byte[] ImageData { get; set; }
+
+
+
         public string Description { get; set; }
 
 
