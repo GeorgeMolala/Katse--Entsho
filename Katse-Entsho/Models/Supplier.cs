@@ -20,7 +20,6 @@ namespace Katse_Entsho.Models
 
 
         [Required(ErrorMessage = "Field Can not be empty")]
-        [MaxLength(10)]
         public int ContactNumber { get; set; }
 
 

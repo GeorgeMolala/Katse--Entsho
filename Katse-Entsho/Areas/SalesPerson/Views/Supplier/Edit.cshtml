@@ -29,13 +29,13 @@
 <h1></h1>
 
 <div asp-validation-summary="All" class="text-danger"> </div>
-<form method="post" asp-controller="Supplier" asp-action="Add">
+<form method="post" asp-controller="Supplier" asp-action="Edit">
 
     <div class="form-group row">
         <div class="col-sm-9">
 
             <div class="col-sm-7">
-                <label>First Name</label>
+                <label>Supplier Name</label>
                 <input asp-for="SupplierName" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee Name" placeholder="Employee Name" />
             </div>
             <div class="col">
@@ -49,7 +49,7 @@
         <div class="col-sm-9">
 
             <div class="col-sm-7">
-                <label>Surname Name :</label>
+                <label>Telephone </label>
                 <input asp-for="ContactNumber" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee Surname" placeholder="Employee Surname" />
             </div>
             <div class="col">
@@ -64,7 +64,7 @@
     <div class="form-group">
         <div class="col-sm-9">
             <div class="col-sm-7 row">
-                <label>Email Address :</label>
+                <label>Email Address </label>
                 <input asp-for="Email" class="form-control" data-toggle="tooltip" data-placement="top" title="Provide Employee email e.g employeeName@domain.com" placeholder="Employee Email" />
             </div>
             <div class="col">
@@ -81,7 +81,7 @@
         <div class="col-sm-9">
 
             <div class="col-sm-7">
-                <label>AddressLine1 :</label>
+                <label>AddressLine1 </label>
                 <input asp-for="AddressLine1" class="form-control" data-toggle="tooltip" data-placement="top" title="Line 1 Address, e.g 721 Block E" placeholder="Provide Address" />
             </div>
             <div class="col">
@@ -128,7 +128,7 @@
         @*Needs to be linked to database*@
         <div class="col-md-7">
             <div class="form-group">
-                <label class="control-label">City: </label>
+                <label class="control-label">City </label>
                 <select id="pageCityElement" asp-for="CityID" class="form-control" asp-items="@(new SelectList(ViewBag.cities, "CityID", "Name"))" data-toggle="tooltip" data-placement="top" title="" placeholder="Select City">
                 </select>
 
@@ -149,7 +149,7 @@
         @*Needs to be linked to database*@                    @*"@(new SelectList(ViewBag.suburbs, "SuburbID", "Name"))"*@
         <div class="col-md-7">
             <div class="form-group">
-                <label class="control-label">Suburb: </label>
+                <label class="control-label">Suburb </label>
                 <select id="pageSuburbElement" asp-for="SuburbID" class="form-control" asp-items="@(new SelectList(ViewBag.suburbs, "SuburbID", "Name"))" data-toggle="tooltip" data-placement="top" title="" placeholder="Select Suburb">
                 </select>
             </div>

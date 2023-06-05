@@ -27,6 +27,9 @@ namespace Katse_Entsho.Models
         public byte[] ImageData { get; set; }
 
 
+        public int CatID { get; set; }
+        public Category Category { get; set; }
+
 
         public string Description { get; set; }
 
