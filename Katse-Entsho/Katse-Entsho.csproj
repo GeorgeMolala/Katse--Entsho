@@ -24,6 +24,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Customer\Models\" />
     <Folder Include="Areas\SalesPerson\Models\" />
+    <Folder Include="wwwroot\media\Products\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Katse_Entsho.Models.Valida;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,10 +22,11 @@ namespace Katse_Entsho.Models
 
 
         [NotMapped]
+        [FileExtension]
         public IFormFile Picture { get; set; }
 
 
-        public byte[] ImageData { get; set; }
+        public string? Image { get; set; }
 
 
         public int CatID { get; set; }
@@ -33,7 +35,7 @@ namespace Katse_Entsho.Models
 
         public string Description { get; set; }
 
-
+        
         public double Price { get; set; }
 
         public int SuppID { get; set; }
