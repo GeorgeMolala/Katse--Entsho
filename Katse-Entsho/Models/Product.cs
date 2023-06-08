@@ -15,9 +15,12 @@ namespace Katse_Entsho.Models
         [Key]
         public int ProductID { get; set; }
 
-
+        [Required(ErrorMessage = "Field Can not be empty")]
         public int BarCode { get; set; }
 
+
+        [Required(ErrorMessage = "Field Can not be empty")]
+        [StringLength(30)]
         public string Name { get; set; }
 
 
@@ -26,20 +29,22 @@ namespace Katse_Entsho.Models
         public IFormFile Picture { get; set; }
 
 
-        public string? Image { get; set; }
+        public string Image { get; set; }
 
 
+        [Required(ErrorMessage = "Field Can not be empty")]
         public int CatID { get; set; }
-        public Category Category { get; set; }
+        public Category Category;
 
-
+        [Required(ErrorMessage = "Field Can not be empty")]
         public string Description { get; set; }
 
-        
+        [Required(ErrorMessage = "Field Can not be empty")]
         public double Price { get; set; }
 
+        [Required(ErrorMessage = "Field Can not be empty")]
         public int SuppID { get; set; }
-        public  Supplier Supplier { get; set; }
+        public Supplier Supplier;
 
     }
 }

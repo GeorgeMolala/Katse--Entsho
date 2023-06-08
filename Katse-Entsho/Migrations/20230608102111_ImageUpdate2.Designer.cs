@@ -4,14 +4,16 @@ using Katse_Entsho.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Katse_Entsho.Migrations
 {
     [DbContext(typeof(KatseContext))]
-    partial class KatseContextModelSnapshot : ModelSnapshot
+    [Migration("20230608102111_ImageUpdate2")]
+    partial class ImageUpdate2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

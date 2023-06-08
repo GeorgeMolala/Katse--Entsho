@@ -6,7 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Katse_Entsho.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Katse_Entsho.Models;
+using Katse_Entsho.Models.Valida;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
 
@@ -44,7 +46,8 @@ namespace Katse_Entsho.Areas.SalesPerson.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Product product)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Product product)
         {
 
             var supplier = _context.Suppliers.ToList();
@@ -63,21 +66,23 @@ namespace Katse_Entsho.Areas.SalesPerson.Controllers
 
 
             //Writes image to specified Location
-            FileStream fs = new FileStream(filePath, FileMode.Create);
-            product.Picture.CopyToAsync(fs);
-            fs.Close();
+            using (var fs = new FileStream(filePath, FileMode.Create))
+            {
+                await product.Picture.CopyToAsync(fs);
+                fs.Close();
+            }
             product.Image = ImageName;
 
             if (ModelState.IsValid)
             {
-                if(product.ProductID == 0)
+                if (product.ProductID == 0)
                 {
-                   
+
 
 
                     //Saving to DB
                     _context.Products.Add(product);
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
 
                     return RedirectToAction("Index");
                 }

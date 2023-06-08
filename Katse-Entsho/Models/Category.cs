@@ -14,5 +14,8 @@ namespace Katse_Entsho.Models
         public string CategoryName { get; set; }
 
 
+        
+
+
     }
 }

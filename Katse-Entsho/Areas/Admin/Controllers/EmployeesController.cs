@@ -114,7 +114,8 @@ namespace Katse_Entsho.Areas.Admin.Controllers
             }
             else
             {
-                return Content("Failed to add");
+                ViewBag.Departments = _context.Departments.OrderBy(g => g.DepartmentName).ToList();
+                return View();
             }
         }
 
