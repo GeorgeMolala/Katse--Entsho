@@ -6,20 +6,17 @@ using System.Threading.Tasks;
 
 namespace Katse_Entsho.Models
 {
-    public class Quote_Link
+    public class Request_Link
     {
-        [Key]
-        public int Quote_LinkID { get; set; }
 
+        [Key]
+        public int Request_LinkID { get; set; }
 
         public int ProductID { get; set; }
         public Product Product { get; set; }
 
-
         public int Quantity { get; set; }
 
-
-        public double Price { get; set; }
-
+        
     }
 }

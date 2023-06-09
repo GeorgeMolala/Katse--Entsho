@@ -26,6 +26,10 @@ namespace Katse_Entsho.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Request_Link> Request_Links { get; set; }
+        public DbSet<Request_Quote> Request_Quotes { get; set; }
+        public DbSet<Quote> Quotes { get; set; }
+        public DbSet<Quote_Link> Quote_Links { get; set; }
 
     }
 }

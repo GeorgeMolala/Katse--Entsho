@@ -36,7 +36,7 @@ namespace Katse_Entsho.Models
 
         [Required(ErrorMessage = "Field Can not be empty")]
         public int CatID { get; set; }
-        public Category Category;
+        public Category Category { get; set; }
 
         [Required(ErrorMessage = "Field Can not be empty")]
         public string Description { get; set; }
@@ -46,7 +46,10 @@ namespace Katse_Entsho.Models
 
         [Required(ErrorMessage = "Field Can not be empty")]
         public int SuppID { get; set; }
-        public Supplier Supplier;
+        public Supplier Supplier { get; set; }
+
+        public ICollection<Request_Link> Request_Links { get; set; }
+        public ICollection<Request_Quote> Request_Quotes { get; set; }
 
     }
 }

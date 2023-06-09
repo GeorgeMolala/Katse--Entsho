@@ -16,5 +16,8 @@ namespace Katse_Entsho.Models
         public string DepartmentName { get; set; }
 
         public string Description { get; set; }
+
+
+        public ICollection<SalesPerson> SalesPeople { get; set; }
     }
 }

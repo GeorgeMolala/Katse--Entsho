@@ -68,7 +68,8 @@ namespace Katse_Entsho.Models
         public Province Province { get; set; }
 
 
-
+        public ICollection<Request_Quote> Request_Quotes { get; set; }
+        public ICollection<Quote> Quotes { get; set; }
 
     }
 }
