@@ -25,6 +25,7 @@ namespace Katse_Entsho.Data
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
     }
 }

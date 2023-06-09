@@ -30,7 +30,9 @@ namespace Katse_Entsho.Areas.SalesPerson.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+            var product = _context.Products.ToList();
+            return View(product);
         }
 
         [HttpGet]
@@ -43,6 +45,21 @@ namespace Katse_Entsho.Areas.SalesPerson.Controllers
             ViewBag.Suppliers = _context.Suppliers.ToList();
 
             return View();
+        }
+
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+
+            var supplier = _context.Suppliers.ToList();
+            ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.Suppliers = _context.Suppliers.ToList();
+
+            var product = _context.Products.Find(id);
+
+            return View(product);
+            
         }
 
         [HttpPost]
@@ -90,6 +107,8 @@ namespace Katse_Entsho.Areas.SalesPerson.Controllers
                 else
                 {
                     ///Update Methods here
+                    _context.Products.Update(product);
+                    await _context.SaveChangesAsync();
                 }
             }
 

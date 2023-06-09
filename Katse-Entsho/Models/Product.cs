@@ -29,7 +29,9 @@ namespace Katse_Entsho.Models
         public IFormFile Picture { get; set; }
 
 
+        [Required(ErrorMessage = "Field Can not be empty")]
         public string Image { get; set; }
+
 
 
         [Required(ErrorMessage = "Field Can not be empty")]

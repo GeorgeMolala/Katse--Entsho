@@ -1,5 +1,36 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model List<Product>
+
+@{ 
+    ViewBag.Title = "Products";
+    Layout = "_LayoutSales";
+
 }
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form method="get" asp-controller="Product" asp-action="Index">
+<section>
+    <div class="form-group border-secondary">
+
+        @foreach (var product in Model)
+        {
+            <div>
+                <img src="~/media/Products/@product.Image" width="150" height="150" />
+
+            </div>
+            <div>
+                <span>
+                    @product.Price.ToString("c");
+                </span>
+                
+                <span>@product.Name</span>
+                
+            </div>
+        }
+
+
+    </div>
+
+</section>
+
+</form>
+
